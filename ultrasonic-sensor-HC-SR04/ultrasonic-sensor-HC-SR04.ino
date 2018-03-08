@@ -6,7 +6,7 @@
  * https://create.arduino.cc/projecthub/Isaac100/getting-started-with-the-hc-sr04-ultrasonic-sensor-036380
  *
  *
- * PIN AANSLUITINGEN
+ * PIN CONNECTIONS
  *
  * Vcc  --> 5V
  * Trig --> 12
