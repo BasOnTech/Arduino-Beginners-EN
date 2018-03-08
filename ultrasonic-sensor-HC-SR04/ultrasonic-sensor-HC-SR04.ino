@@ -38,7 +38,7 @@ void loop() {
   duration = pulseIn(echoPin, HIGH);     // request how long the echoPin has been HIGH
   distance = (duration * 0.0343) / 2;    // calculate the distance based on the speed of sound
                                          // we need to divide by 2 since the sound travelled the distance twice
-  Serial.print("Afstand: ");             // Print the result to the serial monitor
+  Serial.print("Distance: ");             // Print the result to the serial monitor
   Serial.println(distance);
 
   delay(100);                            // pause 100ms till the next measurement
