@@ -72,9 +72,9 @@ void loop() {
 
     // Determine the joystick direction on the Y-axis
     if (yDirection < 480) {
-        Serial.println("Up");
-    } else if (yDirection > 520) {
         Serial.println("Down");
+    } else if (yDirection > 520) {
+        Serial.println("Up");
     }
 
     delay(500);
