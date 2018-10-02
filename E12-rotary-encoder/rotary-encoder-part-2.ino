@@ -12,7 +12,6 @@
  * Twitter:    https://twitter.com/BasOnTech
  * 
  * ---------------------------------------------------------------------------
- *
  * 
  * More info about the Rotary Encoder: 
  * https://en.wikipedia.org/wiki/Rotary_encoder
