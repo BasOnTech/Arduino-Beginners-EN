@@ -1,6 +1,17 @@
-// Bas on Tech 
-// This code is part of the Arduino tutorials for beginners video series
-// http://BasOnTech.com
+/*
+ * Bas on Tech
+ * This course is part of the courses on https://arduino-lessons.com
+ *  
+ * (c) Copyright 2018 - Bas van Dijk / Bas on Tech
+ * This code and course is copyrighted. It is not allowed to use these courses commerically
+ * without explicit written approval
+ * 
+ * YouTube:    https://www.youtube.com/c/BasOnTech
+ * Facebook:   https://www.facebook.com/BasOnTechChannel
+ * Instagram:  https://www.instagram.com/BasOnTech
+ * Twitter:    https://twitter.com/BasOnTech
+ * 
+ */
 
 // Import the libraries for the 1-wire DS18B20 temperature sensor
 #include <OneWire.h>
@@ -27,6 +38,12 @@ void loop(void) {
     // temp = sensors.getTempFByIndex(0);   // get the temperature of the first sensors in Fahrenheit (lists start with 0 not 1)
     Serial.print("Temperature is: ");       // print message without a newline
     Serial.println(temp);                   // print the temperature with a newline
+
+    if (temp > 21) {                        // check if the temperature is higher than 21 degrees Celcius (make it 70 for Fahrenheit)
+        digitalWrite(LED_BUILTIN, HIGH);    // is so, turn the LED on
+    } else {
+        digitalWrite(LED_BUILTIN, LOW);     // if not, turn the LED off
+    }
 
     delay(1000);                            // pause 1000ms / 1 second
 }

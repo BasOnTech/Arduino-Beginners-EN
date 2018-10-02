@@ -1,5 +1,5 @@
 /*
- * Bas on Tech - I2C LCD
+ * Bas on Tech
  * This course is part of the courses on https://arduino-lessons.com
  *  
  * (c) Copyright 2018 - Bas van Dijk / Bas on Tech

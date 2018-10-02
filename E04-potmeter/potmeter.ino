@@ -1,6 +1,17 @@
-// Bas on Tech 
-// This code is part of the Arduino tutorials for beginners video series
-// http://BasOnTech.com
+/*
+ * Bas on Tech
+ * This course is part of the courses on https://arduino-lessons.com
+ *  
+ * (c) Copyright 2018 - Bas van Dijk / Bas on Tech
+ * This code and course is copyrighted. It is not allowed to use these courses commerically
+ * without explicit written approval
+ * 
+ * YouTube:    https://www.youtube.com/c/BasOnTech
+ * Facebook:   https://www.facebook.com/BasOnTechChannel
+ * Instagram:  https://www.instagram.com/BasOnTech
+ * Twitter:    https://twitter.com/BasOnTech
+ * 
+ */
 
 int potPin = 2;               // Potmeter pin
 int ledPin = LED_BUILTIN;     // Builtin LED pin
