@@ -1,7 +1,7 @@
-## HC-SR04 ultrasonic distance sensor
+## IR-receiver with remote control
 Part of the Bas on Tech Arduino YouTube lessons - More info at https://arduino-lessons.com
 
 Subscribe to the Bas on Tech YouTube channel via http://www.youtube.com/c/BasOnTech?sub_confirmation=1
 
 ## Circuit
-![alt text](./ultrasonic-sensor-HC-SR04.png "circuit schema")
+![alt text](./ir-ontvanger.png "circuit schema")
