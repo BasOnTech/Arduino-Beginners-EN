@@ -4,4 +4,4 @@ Part of the Bas on Tech Arduino YouTube lessons - More info at https://arduino-l
 Subscribe to the Bas on Tech YouTube channel via http://www.youtube.com/c/BasOnTech?sub_confirmation=1
 
 ## Circuit
-![alt text](./ir-ontvanger.png "circuit schema")
+![alt text](./ir-receiver.png "circuit schema")
