@@ -2,7 +2,7 @@
  * Bas on Tech
  * This course is part of the courses on https://arduino-lessons.com
  *  
- * (c) Copyright 2018 - Bas van Dijk / Bas on Tech
+ * (c) Copyright 2018-2019 - Bas van Dijk / Bas on Tech
  * This code and course is copyrighted. It is not allowed to use these courses commerically
  * without explicit written approval
  * 
