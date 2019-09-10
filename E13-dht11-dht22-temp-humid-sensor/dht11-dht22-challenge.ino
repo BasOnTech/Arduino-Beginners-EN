@@ -41,18 +41,18 @@
  *
  */
 
-// Bibliotheek voor communicatie met I2C / TWI apparaten
+// Library for I2C / TWI device communication
 #include <Wire.h> 
 
-// Bibliotheek voor het LCD scherm
+// Library to control the LCD screen
 #include <LiquidCrystal_I2C.h>
 
 /* 
- * Stel hier in welke chip en foromaat LCD je hebt
- * Gebruik 0x27 als je chip PCF8574 hebt van NXP
- * Gebruik 0x3F als je chip PCF8574A hebt van Ti (Texas Instruments)
- * De laatste twee getallen geven het formaat van je LCD aan
- * bijvoorbeeld 20x4 of 16x2
+ * Set the correct chip for your LCD
+ * Use 0x27 when you have the PCF8574 chip made by NXP
+ * Use 0x3F when you have the PCF8574A chip made by Ti (Texas Instruments)
+ * The last two digits represent the LCD size
+ * e.g. 20x4 or 16x2
  *  
  */  
 LiquidCrystal_I2C lcd(0x27, 20, 4);
@@ -63,7 +63,7 @@ LiquidCrystal_I2C lcd(0x27, 20, 4);
  * https://maxpromer.github.io/LCD-Character-Creator/
  */
 
-// Graden symbool
+// Degree symbol
 byte degree[] = {
   0x07,
   0x05,
@@ -75,7 +75,7 @@ byte degree[] = {
   0x00
 };
 
-// Druppel
+// Water drop
 byte humid[] = {
   0x04,
   0x04,
@@ -99,76 +99,76 @@ byte temp[] = {
   0x0E
 };
 
-#include "DHT.h"             // Bibliotheek voor DHT sensoren
+#include "DHT.h"             // Library for DHT sensors
 
 #define dhtPin 12            // data pin
 
 /*
- * Stel hier in welke DHT chip je gebruikt
+ * Uncomment the correct DHT chip
  */
 #define dhtType DHT11        // DHT 11
-//#define dhtType DHT22      // DHT 22  (AM2302), AM2321
+//#define dhtType DHT22      // DHT 22 (AM2302), AM2321
 //#define dhtType DHT21      // DHT 21 (AM2301)
 
-DHT dht(dhtPin, dhtType);    // Initialiseer de DHT bibliotheek
+DHT dht(dhtPin, dhtType);    // Initialise the DHT library
 
-float humidityVal;           // luchtvochtigheid
-float tempValC;              // temperatuur in graden Celcius
-float tempValF;              // temperatuur in graden Fahrenheit
-float heatIndexC;            // gevoelstemperatuur in graden Celcius
-float heatIndexF;            // gevoelstemperatuur in graden Fahrenheit
+float humidityVal;           // humidity
+float tempValC;              // temperature in degrees Celcius
+float tempValF;              // temperature in degrees Fahrenheit
+float heatIndexC;            // windchill in degrees Celcius
+float heatIndexF;            // windchill in degrees Fahrenheit
 
 void setup() {
-  Serial.begin(9600);        // stel de seriële monitor in
+  Serial.begin(9600);        // Initialise the serial monitor
 
-  // LCD
-  lcd.init();                  // initialiseer het LCD scherm
-  lcd.backlight();             // zet de backlight aan
-  lcd.createChar(1, degree);   // definieer een symbool in geheugen positie 1
-  lcd.createChar(2, humid);   // definieer een symbool in geheugen positie 1
-  lcd.createChar(3, temp);   // definieer een symbool in geheugen positie 1
+  // LCD screen
+  lcd.init();                // initialise the LCD
+  lcd.backlight();           // turn backlight on
+  lcd.createChar(1, degree); // define a symbol for memory position 1
+  lcd.createChar(2, humid);  // define a symbol for memory position 2
+  lcd.createChar(3, temp);   // define a symbol for memory position 3
 
   // DHT sensor
-  dht.begin();               // start het DHT sensor uitlezen
+  dht.begin();               // start with reading the DHT sensor
 }
 
 void loop() {
 
-  humidityVal = dht.readHumidity();        // vraag de luchtvochtigheid aan de DHT sensor
-  tempValC = dht.readTemperature();        // vraag de temperatuur in graden Celcius aan de DHT sensor
-  tempValF = dht.readTemperature(true);    // vraag de temperatuur in graden Fahrenheit aan de DHT sensor
+  humidityVal = dht.readHumidity();        // get the humidity from the DHT sensor
+  tempValC = dht.readTemperature();        // get the temperature in degrees Celcius from the DHT sensor
+  tempValF = dht.readTemperature(true);    // get the temperature in degrees Fahrenheit from the DHT sensor
 
-  // Controleer of alle waarden goed zijn uitgelezen, zo niet probeer het opnieuw
+  // Check if all values are read correctly, if not try again and exit loop()
   if (isnan(humidityVal) || isnan(tempValC) || isnan(tempValF)) {
-    Serial.println("Uitlezen van DHT sensor mislukt!");
+    Serial.println("Reading DHT sensor failed!");
 
-    // Beëindig de loop() functie
+    // end the loop() function
     return;
   }
 
-  lcd.clear();                 // wis het scherm
+  lcd.clear();                 // clear the screen
   
-  // Bereken de gevoelstemperatuur in graden Celcius
+  // Calculate the windchill in degrees Celcius
   heatIndexC = dht.computeHeatIndex(tempValC, humidityVal, false);
 
-  // Bereken de gevoelstemperatuur in graden Fahrenheit
+  // Calculate the windchill in degrees Fahrenheit
   heatIndexF = dht.computeHeatIndex(tempValF, humidityVal);
 
-  // Print alle waarden naar de LCD
-  lcd.setCursor(0, 0);         // zet de cursor op positie 1, regel 1
+  // Print all values on the LCD
+  lcd.setCursor(0, 0);         // set the cursor to position 1, line 1
   lcd.write(2);
   lcd.print(" ");
   lcd.print(humidityVal);
   lcd.print("%");
 
-  lcd.setCursor(0, 1);         // zet de cursor op positie 1, regel 2
+  lcd.setCursor(0, 1);         // set the cursor to position 1, line 2
   lcd.write(3);
   lcd.print(" ");
   lcd.print(tempValC);
   lcd.write(1);
   lcd.print("C ");
 
-  lcd.setCursor(0, 3);         // zet de cursor op positie 1, regel 4
+  lcd.setCursor(0, 3);         // set the cursor to position 1, line 4
   lcd.write(3);
   lcd.print(" ");
   lcd.print(heatIndexC);
