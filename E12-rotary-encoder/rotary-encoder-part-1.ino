@@ -1,6 +1,6 @@
 /*
  * Bas on Tech - Rotary Encoder and Interrupts
- * This course is part of the courses on https://arduino-lessons.com
+ * This course is part of the courses on https://arduino-tutorials.net
  *  
  * (c) Copyright 2018-2019 - Bas van Dijk / Bas on Tech
  * This code and course is copyrighted. It is not allowed to use these courses commerically
