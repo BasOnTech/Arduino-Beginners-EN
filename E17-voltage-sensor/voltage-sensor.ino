@@ -22,11 +22,11 @@
  * Calculate exact values with multimeter:
  * 
  * Vin on adapter = 12.41V
- * Vout on Arduino = 2.497V
+ * Vout on Arduino = 2.42
  * 5V on Arduino = 5.10V
  * 
  * Vin / vOut = factor
- * 12.41 / 2.497 = 4.97
+ * 12.41 / 2.42 = 5.128
  * 
  */
 
@@ -34,7 +34,7 @@ const int voltageSensorPin = A3;          // sensor pin
 float vIn;                                // measured voltage (3.3V = max. 16.5V, 5V = max 25V)
 float vOut;
 float voltageSensorVal;                   // value on pin A3 (0 - 1023)
-const float factor = 4.092;               // reduction factor of the Voltage Sensor shield
+const float factor = 5.128;               // reduction factor of the Voltage Sensor shield
 const float vCC = 5.00;                   // Arduino input voltage (measurable by voltmeter)
 
 void setup() {
