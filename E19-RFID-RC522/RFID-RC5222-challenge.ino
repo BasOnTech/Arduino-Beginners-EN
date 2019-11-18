@@ -30,18 +30,17 @@
  * SPI MISO    MISO         12 / ICSP-1   50        D12        ICSP-1           14
  * SPI SCK     SCK          13 / ICSP-3   52        D13        ICSP-3           15
  */
-
 #include <SPI.h>                      // SPI library
 #include <MFRC522.h>                  // MFRC522 library
 
 const int pinRST =  9;                // Reset pin
 const int pinSS =  10;                // Serial data pin
 
-const String cardIdValid = "6A165383";  // Allowed card ID
+const String cardIdValid = "6A165383";  // Valid Card ID
 
 MFRC522 mfrc522(pinSS, pinRST);       // Initialise the MFRC522 on pinSS and pinRST
 
-// Read the card id
+// Read the ID of the RFID card
 void getCardID() {
 
   // If there is a new card found AND
@@ -64,16 +63,16 @@ void getCardID() {
     Serial.print("Read card ID: ");
     Serial.println(cardIdRead);
 
-    // If the card ID is allowed
+    // if the cardID is valid
     if (cardIdRead == cardIdValid) {
-      Serial.println("Card allowed");
+      Serial.println("Access granted");
     } else {
-      Serial.println("Card not allowed");
+      Serial.println("Access denied");
     }
 
     Serial.println("");
 
-    // Stop reading
+    // Stop reading the card
     mfrc522.PICC_HaltA(); 
   }
 }
