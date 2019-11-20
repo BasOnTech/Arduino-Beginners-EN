@@ -20,9 +20,9 @@ int ledPin = LED_BUILTIN;     // Build in LED pin
 
 void setup() {
   Serial.begin(9600);         // Initialise the serial monitor
+  pinMode(LED_BUILTIN, OUTPUT);
 }
 
-// Herhaal oneindig
 void loop() {
   
   ldrVal = analogRead(ldrPin);    // Read the analog value of the LDR
