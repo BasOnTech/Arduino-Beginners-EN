@@ -1,5 +1,5 @@
 /*
- * Bas on Tech - Slide potentiometer
+ * Bas on Tech - SG90 tower pro servo
  *
  * This course is part of the courses on https://arduino-tutorials.net
  *  
