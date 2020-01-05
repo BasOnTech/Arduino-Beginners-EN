@@ -6,7 +6,7 @@ Part of the Bas on Tech Arduino YouTube tutorials - More info at https://arduino
 
 This code and course is copyrighted. It is not allowed to use these courses commerically without explicit written approval
 
-# Arudino video tutorials
+# Arduino video tutorials
 
 These Arduino beginner tutorials teach you the basics in a clear and understandable way. More info at https://arduino-tutorials.net
 
