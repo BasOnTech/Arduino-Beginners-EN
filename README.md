@@ -1,10 +1,14 @@
 🇳🇱 Voor de Nederlandse lessen bezoek https://arduino-lessen.nl
 
+-------
+
 Part of the Bas on Tech Arduino YouTube tutorials - More info at https://arduino-tutorials.net
 
 (c) Copyright 2018-2020 - Bas van Dijk / Bas on Tech
 
 This code and course is copyrighted. It is not allowed to use these courses commerically without explicit written approval
+
+-------
 
 # Arduino video tutorials
 
