@@ -1,5 +1,5 @@
 /*
-   Bas on Tech - 4x4 Membrane keypad
+   Bas on Tech - 4x4 Matrix keypad
 
    This course is part of the courses on https://arduino-tutorials.net
 
