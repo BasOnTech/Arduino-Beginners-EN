@@ -105,3 +105,9 @@ Subscribe to the Bas on Tech YouTube channel via http://www.youtube.com/c/BasOnT
 
 [Arduino Tutorial #24 - SG90 TOWER PRO SERVO MOTOR](https://www.youtube.com/watch?v=ceTYMgdfhRk)</br>
 [![](https://i.ytimg.com/vi/ceTYMgdfhRk/mqdefault.jpg)](https://www.youtube.com/watch?v=ceTYMgdfhRk)
+
+[Arduino Tutorial #25 - SSD1331 COLOR OLED DISPLAY (96X64 PIXELS)](https://www.youtube.com/watch?v=hQCXqvFBrco)</br>
+[![](https://i.ytimg.com/vi/hQCXqvFBrco/mqdefault.jpg)](https://www.youtube.com/watch?v=hQCXqvFBrco)
+
+[Arduino Tutorial #26 - 4x4 MATRIX KEYPAD / MEMBRANE KEYBOARD](https://www.youtube.com/watch?v=r61BYh90s20)</br>
+[![](https://i.ytimg.com/vi/r61BYh90s20/mqdefault.jpg)](https://www.youtube.com/watch?v=r61BYh90s20)
