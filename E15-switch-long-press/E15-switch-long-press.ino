@@ -77,7 +77,11 @@ void readButtonState() {
 
       // If there is no measurement running to determine how long the button was pressed AND
       // If the time the button has been pressed is smaller than the minimal time needed for a long press
-      if (!buttonStateLongPress && buttonPressDuration < minButtonLongPressDuration) {
+      // Note: The video shows:
+      //       if (!buttonStateLongPress && buttonPressDuration < minButtonLongPressDuration) {
+      //       since buttonStateLongPress is set to FALSE on line 75, !buttonStateLongPress is always TRUE
+      //       and can be removed.
+      if (buttonPressDuration < minButtonLongPressDuration) {
         Serial.println("Button pressed shortly");
       }
     }
