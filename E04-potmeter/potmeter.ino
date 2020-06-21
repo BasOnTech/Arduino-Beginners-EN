@@ -13,7 +13,7 @@
  * 
  */
 
-int potPin = 2;               // Potmeter pin
+int potPin = A2;              // Potmeter pin
 int ledPin = LED_BUILTIN;     // Builtin LED pin
 int potVal = 0;               // Potmeter's value (0 by default)
 
