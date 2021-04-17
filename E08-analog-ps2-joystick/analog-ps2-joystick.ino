@@ -26,8 +26,8 @@
 
 // Define the pin numbers
 const int swPin = 12;
-const int VrxPin = 5;
-const int VryPin = 0;
+const int VrxPin = A5;
+const int VryPin = A0;
 
 // Set the initial variable values
 int xDirection = 0;
