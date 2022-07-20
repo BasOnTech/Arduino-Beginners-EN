@@ -24,6 +24,6 @@ void loop() {
   digitalWrite(LED_BUILTIN, HIGH);   // Turn the built-in LED on
   delay(1000);                       // Pause for 1 second (1000 milliseconds)
   
-  digitalWrite(LED_BUILTIN, LOW);    // Turn the built-in LED on
+  digitalWrite(LED_BUILTIN, LOW);    // Turn the built-in LED off
   delay(1000);                       // Pause for 1 second (1000 milliseconds)
 }
