@@ -31,7 +31,7 @@ void loop() {
   digitalWrite(LED_BUILTIN, HIGH);   // Turn the built-in LED on
   delay(potVal);                     // Pause for the length of the potval value (0-1023) milliseconds
   
-  digitalWrite(LED_BUILTIN, LOW);    // Turn the built-in LED on
+  digitalWrite(LED_BUILTIN, LOW);    // Turn the built-in LED off
   delay(potVal);                     // Pause for the length of the potval value (0-1023) milliseconds
   
 }
